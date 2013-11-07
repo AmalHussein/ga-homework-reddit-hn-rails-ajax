@@ -5,3 +5,22 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+
+Post.create(title: 'Title 1', link: 'http://www.nytimes.com' , body: ' blah ,bllha, test, content, testing , test , 1 2 3,')
+Post.create(title: 'Title 1', link: 'http://www.nytimes.com' , body: ' blah ,bllha, test, content, testing , test , 1 2 3,')
+Post.create(title: 'Title 1', link: 'http://www.nytimes.com' , body: ' blah ,bllha, test, content, testing , test , 1 2 3,')
+Post.create(title: 'Title 1', link: 'http://www.nytimes.com' , body: ' blah ,bllha, test, content, testing , test , 1 2 3,')
+Post.create(title: 'Title 1', link: 'http://www.nytimes.com' , body: ' blah ,bllha, test, content, testing , test , 1 2 3,')
+Post.create(title: 'Title 1', link: 'http://www.nytimes.com' , body: ' blah ,bllha, test, content, testing , test , 1 2 3,')
+Post.create(title: 'Title 1', link: 'http://www.nytimes.com' , body: ' blah ,bllha, test, content, testing , test , 1 2 3,')
+Post.create(title: 'Title 1', link: 'http://www.nytimes.com' , body: ' blah ,bllha, test, content, testing , test , 1 2 3,')
+Post.create(title: 'Title 1', link: 'http://www.nytimes.com' , body: ' blah ,bllha, test, content, testing , test , 1 2 3,')
+Post.create(title: 'Title 1', link: 'http://www.nytimes.com' , body: ' blah ,bllha, test, content, testing , test , 1 2 3,')
+
+
+
+
+
