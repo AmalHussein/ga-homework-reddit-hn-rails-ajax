@@ -60,9 +60,9 @@ class PostsController < ActionController::Base
   end 
 
   def total_votes
-    return (@post.up_votes - @post.down_votes).abs
+    @post.total_votes = (@post.up_votes - @post.down_votes).abs
   end 
-  
+
   private 
 
   def set_post
@@ -70,7 +70,7 @@ class PostsController < ActionController::Base
   end 
 
   def post_params
-    params.require(:post).permit(:title, :body, :link , :user_id)
+    params.require(:post).permit(:title, :body, :link , :up_votes, :down_votes, :user_id)
   end 
 
 end

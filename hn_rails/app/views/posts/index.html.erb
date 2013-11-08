@@ -4,9 +4,13 @@
 </ul> 
 <% @posts.each do |post| %> 
 <div> 
+<div id='score'><=% post.total_votes %> </div>
 <li> Title: <%= post.title %>, Link: <%= post.link %>, Body: <%= post.body %> </li>
-<li><%=link_to 'Comments', post %> Comments | <%= post.up_votes %> Up Votes | <%= post.down_votes %> Down Votes </li>
+<div class = 'button'><%= button_to "VOTE +", up_vote_path(post) %></div>
+ <li><%=link_to 'Comments', post %> Comments | <%= post.up_votes %> Up Votes | <%= post.down_votes %> Down Votes </li>
 <%=link_to 'Edit Post',  edit_post_path(post) %> 
 </div>
 <% end %>
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path , id: 'new_post' , remote: true %>
+
+
