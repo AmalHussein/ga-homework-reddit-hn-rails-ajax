@@ -1,0 +1,8 @@
+<h1>Hacker News Posts</h1>
+
+<ul id='songs'>
+</ul> 
+<% @posts.each do |post| %>
+<li> Title: <%= post.title %>, Link: <%= post.link %>, Body: <%= post.body %> </li>
+<% end %>
+<%= link_to 'New Post', new_post_path %>

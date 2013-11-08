@@ -1,8 +1,8 @@
 HnRails::Application.routes.draw do
  
   devise_for :users
- root :to => "post#index"
+ root :to => "posts#index"
 
- resource :posts
+ resources :posts
  
 end
