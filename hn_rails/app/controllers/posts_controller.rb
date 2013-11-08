@@ -11,6 +11,8 @@ class PostsController < ActionController::Base
   end
 
   def show
+
+    #@comment = Comment.new
   end
 
   def new
@@ -49,6 +51,18 @@ class PostsController < ActionController::Base
   	redirect_to posts_url 
   end
 
+  def up_votes
+    return @post.up_votes += 1  
+  end 
+
+  def down_votes
+    return @post.down_votes +=1
+  end 
+
+  def total_votes
+    return (@post.up_votes - @post.down_votes).abs
+  end 
+  
   private 
 
   def set_post
