@@ -1,5 +1,5 @@
 class PostsController < ActionController::Base 
-  
+
 	before_action :set_post, only: [:show, :edit, :update, :destroy]
 
 	def index
@@ -11,8 +11,6 @@ class PostsController < ActionController::Base
   end
 
   def show
-
-    #@comment = Comment.new
   end
 
   def new
@@ -21,7 +19,7 @@ class PostsController < ActionController::Base
 
   def create
   	@post = Post.new(post_params)
-  	 respond_to do |format|
+    respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @post }
@@ -30,8 +28,8 @@ class PostsController < ActionController::Base
         format.html { render action: 'new' }
         format.json { render json: @post.errors, status: :unprocessable_entity }
         format.js
-       end 
       end 
+    end 
   end
 
   def edit
@@ -52,15 +50,16 @@ class PostsController < ActionController::Base
   end
 
   def up_votes
-    return @post.up_votes += 1  
+   @post = Post.increment_counter(:up_votes, params[:post_id])
+   redirect_to  posts_url
   end 
 
   def down_votes
-    return @post.down_votes +=1
+   @post = Post.increment_counter(:down_votes, params[:post_id])
   end 
 
   def total_votes
-    @post.total_votes = (@post.up_votes - @post.down_votes).abs
+    @post = (@post.up_votes - @post.down_votes).abs
   end 
 
   private 

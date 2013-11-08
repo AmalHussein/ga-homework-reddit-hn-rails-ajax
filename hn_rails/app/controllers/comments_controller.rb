@@ -4,8 +4,7 @@ class CommentsController < ActionController::Base
     @comment = Comment.new
   end
 
-
-def create
+  def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
     redirect_to post_path(@post)
@@ -24,9 +23,9 @@ def create
 
   private
 
-    def comment_params
-      params.require(:comment).permit(:title, :body , :post_id, :user_id)
-    end
+  def comment_params
+    params.require(:comment).permit(:title, :body , :post_id, :user_id)
+  end
 end
 
 
@@ -39,7 +38,7 @@ end
 #       @comments = Comment.all #add in a sort by statement here
 #     end 
 #   end
- 
+
 #   def show
 #   end
 
@@ -59,7 +58,7 @@ end
 #   #   else 
 #   #     render action: 'new'
 #   #   end 
-    
+
 #   # end
 
 
