@@ -21,15 +21,15 @@
 # Post.create(title: 'Title 1', link: 'http://www.nytimes.com' , body: ' blah ,bllha, test, content, testing , test , 1 2 3,')
 
 
-Comment.create( title: "test comment", body: " hello moto i'm a comment")
-Comment.create( title: "test comment", body: " hello moto i'm a comment")
-Comment.create( title: "test comment", body: " hello moto i'm a comment")
-Comment.create( title: "test comment", body: " hello moto i'm a comment")
-Comment.create( title: "test comment", body: " hello moto i'm a comment")
-Comment.create( title: "test comment", body: " hello moto i'm a comment")
-Comment.create( title: "test comment", body: " hello moto i'm a comment")
-Comment.create( title: "test comment", body: " hello moto i'm a comment")
-Comment.create( title: "test comment", body: " hello moto i'm a comment")
-Comment.create( title: "test comment", body: " hello moto i'm a comment")
+# Comment.create( title: "test comment", body: " hello moto i'm a comment")
+# Comment.create( title: "test comment", body: " hello moto i'm a comment")
+# Comment.create( title: "test comment", body: " hello moto i'm a comment")
+# Comment.create( title: "test comment", body: " hello moto i'm a comment")
+# Comment.create( title: "test comment", body: " hello moto i'm a comment")
+# Comment.create( title: "test comment", body: " hello moto i'm a comment")
+# Comment.create( title: "test comment", body: " hello moto i'm a comment")
+# Comment.create( title: "test comment", body: " hello moto i'm a comment")
+# Comment.create( title: "test comment", body: " hello moto i'm a comment")
+# Comment.create( title: "test comment", body: " hello moto i'm a comment")
 
 

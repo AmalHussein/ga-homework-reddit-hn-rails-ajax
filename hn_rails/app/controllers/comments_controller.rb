@@ -3,12 +3,12 @@ class CommentsController < ActionController::Base
 
 	def index
 		if params[:post_id]
-			@comments = Comment.where(:comment_id, params[:comment_id])
+			@comments = Comment.where(:post_id, params[:post_id])
 		else  
       @comments = Comment.all #add in a sort by statement here
     end 
   end
-
+ 
   def show
   end
 

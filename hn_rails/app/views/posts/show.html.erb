@@ -1,0 +1,22 @@
+<h1><%= link_to @post.title , @post.link %></h1>
+<p><%= @post.body %></p>
+
+
+<div>
+  <h2>Comments: </h2>
+  <% @post.comments.each do |comment| %>
+  <h3><%= comment.title %> </h3>
+  <p><%= comment.body %></p>
+  <p>Submitted by: <%= comment.user_id %></p>
+<%end%> 
+</div>
+
+
+
+<div class="navigation-links">
+<%= link_to "New Comment", new_post_comment_path(@post) %> 
+<%= link_to "Edit", edit_post_path(@post) %>
+<%= link_to "Delete", @post, method: :delete, data: {confirm: "Are you sure?" } %>
+<%= link_to "Back", posts_path %>
+
+</div>
