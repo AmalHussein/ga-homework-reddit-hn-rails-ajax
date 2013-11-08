@@ -8,6 +8,7 @@ class CreatePosts < ActiveRecord::Migration
     	t.integer :up_votes
     	t.integer :down_votes
     	t.integer :total_votes
+        t.belongs_to :user
     	t.timestamps 
     end
   end

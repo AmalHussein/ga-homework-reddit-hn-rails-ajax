@@ -1,11 +1,12 @@
 class CreateComments < ActiveRecord::Migration
+  
   def change
     create_table :comments do |t|
     	t.text :body 
     	t.string :title
-    	t.integer :post_id 
     	t.integer :up_votes 
-    	t.text :user_id
+      t.belongs_to :post
+      t.belongs_to :user
     	t.timestamps 
     end
   end
@@ -14,6 +15,5 @@ class CreateComments < ActiveRecord::Migration
   	drop_table :comments
   end 
 
-  add_index :comments , :post_id
 
 end
