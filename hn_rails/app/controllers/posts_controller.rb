@@ -55,7 +55,7 @@ class PostsController < ActionController::Base
   end 
 
   def post_params
-    params.require(:post).permit(:title, :body, :link) #comment_id here?
+    params.require(:post).permit(:title, :body, :link , :user_id)
   end 
 
 end
