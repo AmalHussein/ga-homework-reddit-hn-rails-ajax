@@ -16,20 +16,40 @@ class CommentsController < ActionController::Base
   	@comment = Comment.new
   end
 
+
   def create
-  	@comment = Comment.new(comment_params)
-  	 respond_to do |format|
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.create(comment_params)
+    @comment.user_id = current_user.id
+
+    respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'comment was successfully created.' }
+        format.html { redirect_to category_post_path(@post.category_id, @post), notice: 'Comment was successfully created.' }
         format.json { render action: 'show', status: :created, location: @comment }
-        format.js 
+        format.js
       else
         format.html { render action: 'new' }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
         format.js
-       end 
-      end 
+      end
+    end
   end
+
+
+  # def create
+  # 	@comment = Comment.new(comment_params)
+  # 	 respond_to do |format|
+  #     if @comment.save
+  #       format.html { redirect_to @comment, notice: 'comment was successfully created.' }
+  #       format.json { render action: 'show', status: :created, location: @comment }
+  #       format.js 
+  #     else
+  #       format.html { render action: 'new' }
+  #       format.json { render json: @comment.errors, status: :unprocessable_entity }
+  #       format.js
+  #      end 
+  #     end 
+  # end
 
   def edit
   end
